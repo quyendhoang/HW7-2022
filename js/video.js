@@ -33,9 +33,10 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 document.querySelector("#skip").addEventListener("click", function() {
 	video.currentTime += 10
- 	console.log("Current time is" + video.currentTime);
+ 	
 	if (video.currentTime >= video.duration)
 		video.currentTime = 0
+	console.log("Current time is" + video.currentTime);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
@@ -52,8 +53,8 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#slider").addEventListener("change", function() {
-    console.log(this)
-    console.log(this.volume)
+//     console.log(this)
+//     console.log(this.volume)
     // volume1 = document.querySelector("#slider")
 	//volume1.volume = this.value/100;
 	video.volume = (this.value/100)
@@ -64,14 +65,14 @@ document.querySelector("#slider").addEventListener("change", function() {
 document.querySelector("#vintage").addEventListener("click", function() {
     console.log("I am in old school")
     vd = document.querySelector("video")
-	vd.classList.add("oldSchool")
+	vd.classList = 'video oldSchool'
 
 });
 
 document.querySelector("#orig").addEventListener("click", function() {
     console.log("I am in original")
     vd = document.querySelector("video")
-	vd.classList.remove("oldSchool")
+	vd.classList = 'video'
 
 });
 
